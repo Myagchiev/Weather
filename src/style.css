@@ -1,0 +1,113 @@
+
+html {
+  height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  header {
+    background-color: rgba(0, 0, 0, 0.37);
+    width: 100%;
+    z-index: 1;
+  }
+  #header {
+    border-radius: 0.5rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+
+
+/* Анимация для блока погоды */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+#weather {
+  margin-top: 10rem;
+  font-family: Arial, sans-serif;
+  padding: 3rem;
+  color: white;
+  border-radius: 8px 8px 0 0;
+  background-color: rgba(0, 0, 0, 0.253);
+  position: absolute;
+  left: 35%;
+  opacity: 0;
+  animation: fadeIn 1s ease-out forwards;
+  display: none;
+}
+
+hr {
+  color: white;
+  margin-bottom: 1rem;
+}
+  
+  #cityName {
+    font-size: 58px;
+    text-align: center;
+    margin-bottom: 15px;
+  }
+  
+  #temperature, #description, #windSpeed {
+    font-size: 35px;
+    margin: 5px 0;
+  }
+  
+  #cityInput {
+    width: 60%;
+    padding: 10px;
+    font-size: 16px;
+    border: none;
+    outline: none;
+  }
+  
+  #getWeatherButton {
+    padding: 10px 25px;
+    font-size: 16px;
+    background-color: #37b916;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 4px;
+  }
+  
+  #getWeatherButton:hover {
+    background-color: #22740e;
+  }
+  
+
+  /* Стили для прелоадера */
+.loader {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 60px;
+  height: 60px;
+  border: 5px solid #f3f3f3;
+  border-top: 5px solid #3498db;
+  border-radius: 50%;
+  animation: spin 2s linear infinite;
+}
+
+/* Анимация для вращения */
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
