@@ -2,6 +2,7 @@
   "name": "weather-landing",
   "version": "1.0.0",
   "main": "index.js",
+  "homepage": "https://username.github.io/weather-landing",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "webpack serve --mode development",
